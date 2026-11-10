@@ -1,79 +1,220 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maps & Location | Patagonia, Chile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .research-section{margin:3rem 0}
+    .research-section h2{margin-bottom:1rem}
+    .map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem;margin:1.5rem 0}
+    .map-card{border:1px solid rgba(80,90,75,.2);background:#fff;border-radius:12px;overflow:hidden}
+    .map-thumb-frame{width:100%;height:360px;display:flex;align-items:center;justify-content:center;background:#f2f0e9;overflow:hidden}
+    .map-zoom{display:flex;width:100%;height:360px;padding:0;border:0;background:#f2f0e9;cursor:zoom-in;align-items:center;justify-content:center}
+    .map-zoom img{display:block;width:100%;height:100%;object-fit:contain}
+    .map-zoom-hint{margin:.75rem 0 1rem;padding:.65rem 1rem;background:#f5f3ed;border-left:3px solid #9b8663;color:#666;font-size:.85rem;line-height:1.5}
+    .cartographer-zoom{display:block;width:190px;max-width:100%;padding:0;border:0;background:transparent;cursor:zoom-in;text-align:left}
+    .cartographer-zoom img{display:block;width:100%;max-height:260px;object-fit:cover;object-position:top;border-radius:8px}
+    .map-zoom:focus-visible{outline:3px solid #9b8663;outline-offset:-3px}
+    .map-lightbox{width:min(96vw,1400px);max-width:none;max-height:94vh;padding:0;border:0;border-radius:12px;background:#171714;overflow:hidden}
+    .map-lightbox::backdrop{background:rgba(0,0,0,.82)}
+    .map-lightbox img{display:block;width:100%;height:88vh;max-height:88vh;object-fit:contain;background:#171714}
+    .map-lightbox-close{position:absolute;top:.75rem;right:.75rem;width:2.5rem;height:2.5rem;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:#222;font-size:1.5rem;line-height:1;cursor:pointer}
+        .map-card .map-copy{padding:1.1rem 1.2rem}
+    .map-card h3{margin:.1rem 0 .5rem}
+    .map-credit,.small-source{font-size:.82rem;line-height:1.55;color:#666}
+    .fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0}
+    .fact{padding:1.2rem;border-left:3px solid #9b8663;background:#f5f3ed}
+    .fact strong{display:block;margin-bottom:.35rem}
+    .cartographer{display:grid;grid-template-columns:190px 1fr;gap:1.5rem;align-items:start;margin:1.5rem 0}
+    .cartographer img{width:100%;max-height:260px;object-fit:cover;object-position:top;border-radius:8px}
+    .references-list li{margin:.75rem 0;overflow-wrap:anywhere}
+    .map-note{font-size:.9rem;color:#666}
+    @media(max-width:700px){.map-grid,.fact-grid{grid-template-columns:1fr}.cartographer{grid-template-columns:1fr}.cartographer img{max-width:190px}.map-thumb-frame,.map-zoom{height:280px}.map-lightbox{width:98vw}.map-lightbox img{height:82vh;max-height:82vh}}
+  </style>
 </head>
-
 <body>
-    <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">P</span><span>PATAGONIA
-                <small>CHILE · EARTH SCIENCE</small></span></a><button class="menu-toggle" aria-label="Open navigation"
-            aria-expanded="false"><span></span><span></span><span></span></button>
-        <nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a>
-            <div class="nav-group"><button class="nav-trigger">Earth Processes <span>⌄</span></button>
-                <div class="dropdown"><a href="maps.html">01 · Maps & Location</a><a href="tectonics.html">02 · Plate
-                        Tectonics</a><a href="erosion.html">03 · Weathering & Erosion</a><a href="water.html">04 · Water
-                        & Coastlines</a><a href="climate.html">05 · Climate & Biomes</a></div>
-            </div><a href="references.html">References</a>
-        </nav>
-    </header>
-    <main>
-        <section class="page-hero"
-            style="--page-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85')">
-            <div>
-                <p class="eyebrow">EARTH PROCESSES / 01</p>
-                <h1>Maps<br><em> Location & Cartographers</em></h1>
-            </div>
-        </section>
-        <section class="section-wrap article-layout">
-            <article class="article-main">
-                <p class="eyebrow">01 / Maps, Location & Cartographers</p>
-                <h2>Finding Patagonia on the map</h2>
-                <p class="lead">Patagonia is a large geographic region shared by southern Chile and Argentina. This
-                    project focuses on the Chilean side, especially the Magallanes Region and Torres del Paine National
-                    Park, in the far south of the country.</p>
-                <h3>Understanding the process</h3>
-                <p>Maps help us understand where places are, how far apart they are, and how physical features are
-                    connected. A physical map can show mountain ranges, rivers, lakes, and elevation. A political map
-                    shows boundaries and administrative regions. Satellite images add another perspective by showing
-                    patterns on Earth's surface.</p>
-                <h3>Why it matters in Patagonia</h3>
-                <p>Torres del Paine National Park is in the Province of Última Esperanza, Magallanes and Chilean
-                    Antarctic Region. CONAF lists the park's area as about 227,298 hectares. Its location includes
-                    mountain terrain, glaciers, lakes, rivers, and steppe landscapes.</p>
-                <p>When reading a map of Patagonia, look for the Andes, the Southern Patagonian Ice Field, fjords, and
-                    the coast. Compare a physical map with a satellite image: each one reveals different information
-                    about the same landscape.</p>
-                <div class="callout"><span class="callout-label">Map reading</span>
-                    <h3>Scale, direction, legend, latitude, longitude, elevation</h3>
-                    <p>A map is a model of a real place. Scale tells us the relationship between map distance and ground
-                        distance; a legend explains symbols; and coordinates help identify a location precisely.</p>
-                </div>
-                <p class="small-note">Continue exploring: <a href="references.html">view the project references</a> for
-                    sources and further reading.</p>
-            </article>
-            <aside class="article-aside"><span class="aside-number">01</span>
-                <p>FIELD NOTES</p>
-                <h3>Maps, Location & Cartographers</h3>
-                <div class="aside-rule"></div>
-                <p>Look closely at the landscape. Notice the shape of the land, the movement of water, and the
-                    relationship between living things and their environment.</p><a href="about.html">About this project
-                    ↗</a>
-            </aside>
-        </section>
-    </main>
-    <footer class="footer"><a class="brand" href="index.html"><span class="brand-mark">P</span><span>PATAGONIA
-                <small>CHILE · EARTH SCIENCE</small></span></a>
-        <p>A student exploration of the physical geography of southern Chile.</p><span>© 2026 · Educational
-            project</span>
-    </footer>
-    <script src="assets/js/main.js"></script>
-</body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">P</span><span>PATAGONIA<small>CHILE · EARTH SCIENCE</small></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <div class="nav-group"><button class="nav-trigger">Earth Processes <span>⌄</span></button>
+        <div class="dropdown">
+          <a href="maps.html">01 · Maps & Location</a><a href="tectonics.html">02 · Plate Tectonics</a>
+          <a href="erosion.html">03 · Weathering & Erosion</a><a href="water.html">04 · Water & Coastlines</a>
+          <a href="climate.html">05 · Climate & Biomes</a>
+        </div>
+      </div><a href="references.html">References</a>
+    </nav>
+  </header>
 
+  <main>
+    <section class="page-hero" style="--page-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85')">
+      <div><p class="eyebrow">EARTH PROCESSES / 01</p><h1>Maps<br><em>Location & Cartographers</em></h1></div>
+    </section>
+
+    <section class="section-wrap article-layout">
+      <article class="article-main">
+        <p class="eyebrow">01 / Maps, Location & Cartographers</p>
+        <h2>Finding Chile and Patagonia on the map</h2>
+        <p class="lead">Chile is a long, narrow country on the western edge of South America. It stretches between the Pacific Ocean and the Andes Mountains. This project focuses especially on southern Chilean Patagonia and Torres del Paine National Park, while the maps on this page show the geographic and historical context of the whole country.</p>
+
+        <section class="research-section" id="location">
+          <h2>1. Where is Chile located?</h2>
+          <p>Chile is located in the southwestern part of South America, along the continent’s Pacific coast. It is in the Southern and Western Hemispheres. Peru borders Chile to the north, Bolivia lies to the northeast, and Argentina borders it to the east. The Pacific Ocean forms most of its western boundary. The country also includes Pacific islands, such as Rapa Nui (Easter Island), and claims a territory in Antarctica. For this project, the latitude range below refers to continental Chile.</p>
+          <div class="fact-grid">
+            <div class="fact"><strong>Continent and region</strong>South America · southwestern coast / Southern Cone</div>
+            <div class="fact"><strong>Continental latitude range</strong>Approximately 17°29′57″ S to 56°32′12″ S</div>
+            <div class="fact"><strong>Neighboring countries</strong>Peru, Bolivia, and Argentina</div>
+            <div class="fact"><strong>Major physical features</strong>Pacific Ocean, Andes Mountains, Atacama Desert, fjords, glaciers, and Patagonia</div>
+          </div>
+          <p class="small-source">Source: Government of Chile, “Our Country.” The government describes Chile as a country with continental, insular, and Antarctic geographic areas.</p>
+        </section>
+
+        <section class="research-section" id="maps">
+          <h2>2. Maps that explain Chile</h2>
+          <p>Each map gives a different perspective. A location map helps identify Chile in South America; a physical map shows landforms and elevation; and historical maps help us understand how geographic knowledge and political boundaries changed over time.</p>
+          <p class="map-zoom-hint">Click any map thumbnail to enlarge it. Press Escape, click the close button, or click outside the image to return to this page.</p>
+          <div class="map-grid">
+            <div class="map-card">
+              <button class="map-zoom" type="button" data-full-map="images/chile_4395_mar10-1.png" data-map-alt="United Nations map of Chile" aria-label="Enlarge the United Nations map of Chile">
+                <img src="images/chile_4395_mar10-1.png" alt="United Nations map of Chile" loading="lazy">
+              </button>
+              <div class="map-copy">
+                <h3>Map 1 · Chile in South America</h3>
+                <p>This United Nations map shows Chile’s long north–south shape, its administrative regions, cities, roads, neighboring countries, and surrounding oceans. It helps locate Chile in relation to Peru, Bolivia, Argentina, and the Pacific Ocean.</p>
+                <p class="map-credit">Map: United Nations Cartographic Section, Map No. 4395 Rev. 0 (2010). The PDF map does not state a map projection in its displayed map information.</p>
+                <a href="https://www.un.org/geospatial/sites/www.un.org.geospatial/files/files/documents/2020/Apr/chile_4395_mar10.pdf" target="_blank" rel="noopener">Open the United Nations map ↗</a>
+              </div>
+            </div>
+            <div class="map-card">
+              <button class="map-zoom" type="button" data-full-map="images/large_physiography_map_of_chile_2009.jpg" data-map-alt="Physical relief map of Chile showing the Andes, neighboring countries, and elevation" aria-label="Enlarge the physical geography map of Chile">
+                <img src="images/large_physiography_map_of_chile_2009.jpg" alt="Physical relief map of Chile showing the Andes, neighboring countries, and elevation" loading="lazy">
+              </button>
+              <div class="map-copy">
+                <h3>Map 2 · Physical geography and relief</h3>
+                <p>This physical map shows the Andes Mountains, the Atacama Desert, the Pacific coast, and the varied landscapes of southern Chile. Elevation shading helps explain why Chile has such different environments from north to south.</p>
+                <p class="map-credit">Map: CIA (2009), reproduced by the Perry-Castañeda Library Map Collection. Projection: Transverse Mercator, central meridian 71° W (as identified for this physiographic map in the cited map record).</p>
+                <a href="https://maps.lib.utexas.edu/maps/chile.html" target="_blank" rel="noopener">View the University of Texas Chile map collection ↗</a>
+              </div>
+            </div>
+            <div class="map-card">
+              <button class="map-zoom" type="button" data-full-map="images/MapaClaudioGay_1200x1200.webp" data-map-alt="Historical 1854 map of Chile by Claudio Gay" aria-label="Enlarge Claudio Gay’s historical map of Chile">
+                <img src="images/MapaClaudioGay_1200x1200.webp" alt="Historical 1854 map of Chile by Claudio Gay" loading="lazy">
+              </button>
+              <div class="map-copy">
+                <h3>Map 3 · Claudio Gay’s map of Chile (1854)</h3>
+                <p>This nineteenth-century map is part of Claudio Gay’s work to describe Chile’s geography. It represents the territory known to the young republic and includes geographic details that helped readers understand the country’s shape and regions. Compare it with a modern map to notice how mapping detail and territorial representation developed.</p>
+                <p class="map-credit">Historical map by Claudio Gay, published in his Atlas de la historia física y política de Chile (1854). Image shown is a reproduction.</p>
+                <a href="https://www.memoriachilena.gob.cl/602/w3-article-646423.html" target="_blank" rel="noopener">Explore the National Library’s information about Gay’s atlas ↗</a>
+              </div>
+            </div>
+            <div class="map-card">
+              <button class="map-zoom" type="button" data-full-map="images/Chile.CarlosPrieto.1881.jpg" data-map-alt="1881 map showing proposed Chile Argentina boundary lines in Patagonia and Tierra del Fuego" aria-label="Enlarge the 1881 Chile–Argentina boundary map">
+                <img src="images/Chile.CarlosPrieto.1881.jpg" alt="1881 map showing proposed Chile Argentina boundary lines in Patagonia and Tierra del Fuego" loading="lazy">
+              </button>
+              <div class="map-copy">
+                <h3>Map 4 · Chile–Argentina boundary proposals (1881)</h3>
+                <p>This historical map illustrates several proposed boundary lines between Chile and Argentina in the far south, including Patagonia and Tierra del Fuego. It shows that national borders were negotiated and changed through diplomacy, not simply fixed by physical geography.</p>
+                <p class="map-credit">Map by Carlos M. Prieto, Chilean Hydrographic Office (1881), preserved on Wikimedia Commons. The map records proposals associated with the boundary negotiations and the 1881 treaty.</p>
+                <a href="https://commons.wikimedia.org/wiki/File:Chile.CarlosPrieto.1881.jpg" target="_blank" rel="noopener">View the historical map record ↗</a>
+              </div>
+            </div>
+          </div>
+          <p class="map-note">Projection note: map projections transform the curved Earth onto a flat surface. The physical map above is identified as Transverse Mercator with a central meridian of 71° W. The United Nations map and the historical maps do not identify a projection in the cited display records, so no projection is assumed for them.</p>
+        </section>
+
+        <section class="research-section" id="history">
+          <h2>3. How long has Chile existed?</h2>
+          <p>The land that is now Chile was inhabited by Indigenous peoples long before the modern country existed. During the colonial period, much of the territory was governed by Spain as part of the Captaincy General of Chile. The independence process began in 1810, and Chile formally declared independence in 1818. The country’s borders and administrative organization continued to develop during the nineteenth and twentieth centuries through treaties, exploration, and political decisions.</p>
+          <p>Historical maps help show this process. For example, the 1854 map by Claudio Gay represents the young republic, while the 1881 map records boundary proposals between Chile and Argentina in the south. These examples show why maps are historical documents as well as geographic tools.</p>
+          <p class="small-source">Historical cartography context: Biblioteca Nacional de Chile, Memoria Chilena, “Representaciones cartográficas de Chile (1768–1929)” and “Representaciones cartográficas del Chile colonial.”</p>
+        </section>
+
+        <section class="research-section" id="cartographers">
+          <h2>4. A cartographer who influenced Chile: Claudio Gay</h2>
+          <div class="cartographer">
+            <button class="cartographer-zoom map-zoom" type="button" data-full-map="images/Fotografia_de_Claudio_Gay.jpg" data-map-alt="Portrait of Claudio Gay" aria-label="Enlarge the portrait of Claudio Gay">
+              <img src="images/Fotografia_de_Claudio_Gay.jpg" alt="Portrait of Claudio Gay" loading="lazy">
+            </button>
+            <div>
+              <h3>Claudio Gay (1800–1873)</h3>
+              <p>Claudio Gay was a French naturalist and scientist who became an important figure in the study and mapping of Chile. In 1830, the Chilean government hired him to explore the country, study its natural resources, and prepare geographic information. Between 1830 and 1842, he traveled from the Atacama region to Chiloé, documenting places that were not yet accurately represented on national maps.</p>
+              <p>One of his major cartographic accomplishments was the 1841 “Mapa de Chile levantado de orden del Gobierno de esta República.” He also published the <em>Atlas de la historia física y política de Chile</em>, which included a general map and maps of provinces and geographic features. His work helped the government understand and represent the territory of the young republic.</p>
+              <p class="map-credit">Portrait: historical image of Claudio Gay, via Wikimedia Commons. See the National Library of Chile for information about his cartographic work.</p>
+            </div>
+          </div>
+          <h3>Why was his work important?</h3>
+          <p>Before Gay’s work, Chile lacked a reliable and detailed general map of its territory. His surveys and publications brought together geographic observations about the country and helped establish a more systematic national cartography. Later scientists, including Amado Pissis, continued this work. Pissis was hired in 1848 to study Chile’s geology and mineral resources and published <em>Geografía física de la República de Chile</em> in 1875.</p>
+        </section>
+
+        <section class="research-section">
+          <h2>5. Why maps matter in Patagonia</h2>
+          <p>Maps help us understand how the physical environment shapes a region. In Patagonia, the Andes, glaciers, fjords, lakes, rivers, and coastlines create a complex landscape. A physical map shows elevation and landforms, while a political map shows administrative and international boundaries. Satellite images can reveal patterns in the landscape that are harder to see on a traditional map.</p>
+          <p>Torres del Paine National Park is in the Province of Última Esperanza, Magallanes and Chilean Antarctic Region. Comparing maps of Chile with more detailed maps of Patagonia helps connect the country’s location to the landscapes studied in this project.</p>
+        </section>
+
+        <section class="research-section" id="references">
+          <h2>References</h2>
+          <p class="map-note">The following sources support the geographic facts, historical maps, and cartographer information on this page. Map-image credits are included with each map.</p>
+          <ul class="references-list">
+            <li>Biblioteca Nacional de Chile. (n.d.). <em>Representaciones cartográficas de Chile durante el siglo XIX</em>. Memoria Chilena. <a href="https://www.memoriachilena.gob.cl/602/w3-article-582424.html" target="_blank" rel="noopener">https://www.memoriachilena.gob.cl/602/w3-article-582424.html</a></li>
+            <li>Biblioteca Nacional de Chile. (n.d.). <em>Representaciones cartográficas de Chile (1768–1929)</em>. Memoria Chilena. <a href="https://www.memoriachilena.gob.cl/602/w3-article-582430.html" target="_blank" rel="noopener">https://www.memoriachilena.gob.cl/602/w3-article-582430.html</a></li>
+            <li>Biblioteca Nacional de Chile. (2016, September 30). <em>Biblioteca Nacional Digital publica el primer mapa de Chile republicano</em>. Memoria Chilena. <a href="https://www.memoriachilena.gob.cl/602/w3-article-329814.html" target="_blank" rel="noopener">https://www.memoriachilena.gob.cl/602/w3-article-329814.html</a></li>
+            <li>Biblioteca Nacional de Chile. (n.d.). <em>Atlas de la Historia Física y Política de Chile</em>. Memoria Chilena. <a href="https://www.memoriachilena.gob.cl/602/w3-article-646423.html" target="_blank" rel="noopener">https://www.memoriachilena.gob.cl/602/w3-article-646423.html</a></li>
+            <li>Government of Chile. (n.d.). <em>Our country</em>. <a href="https://www.gob.cl/en/our-country/" target="_blank" rel="noopener">https://www.gob.cl/en/our-country/</a></li>
+            <li>González Leiva, J. I. (2007). Primeros levantamientos cartográficos generales de Chile con base científica: Los mapas de Claudio Gay y Amado Pissis. <em>Revista de Geografía Norte Grande, 38</em>, 21–44. <a href="https://doi.org/10.4067/S0718-34022007000200002" target="_blank" rel="noopener">https://doi.org/10.4067/S0718-34022007000200002</a></li>
+            <li>United Nations, Department of Field Support, Cartographic Section. (2010). <em>Chile</em> (Map No. 4395 Rev. 0). <a href="https://www.un.org/geospatial/sites/www.un.org.geospatial/files/files/documents/2020/Apr/chile_4395_mar10.pdf" target="_blank" rel="noopener">https://www.un.org/geospatial/sites/www.un.org.geospatial/files/files/documents/2020/Apr/chile_4395_mar10.pdf</a></li>
+            <li>University of Texas at Austin, Perry-Castañeda Library Map Collection. (n.d.). <em>Chile maps</em>. <a href="https://maps.lib.utexas.edu/maps/chile.html" target="_blank" rel="noopener">https://maps.lib.utexas.edu/maps/chile.html</a></li>
+            <li>Superintendencia de Valores y Seguros de Chile. (n.d.). <em>Chile — Physiography</em> [Map]. <a href="https://www.cmfchile.cl/portal/prensa/625/articles-13343_doc_pdf.pdf" target="_blank" rel="noopener">https://www.cmfchile.cl/portal/prensa/625/articles-13343_doc_pdf.pdf</a></li>
+            <li>Wikimedia Commons. (n.d.). <em>Chile.CarlosPrieto.1881.jpg</em> [Historical map]. <a href="https://commons.wikimedia.org/wiki/File:Chile.CarlosPrieto.1881.jpg" target="_blank" rel="noopener">https://commons.wikimedia.org/wiki/File:Chile.CarlosPrieto.1881.jpg</a></li>
+            <li>Wikimedia Commons. (n.d.). <em>Fotografia de Claudio Gay.jpg</em> [Photograph]. <a href="https://commons.wikimedia.org/wiki/File:Fotografia_de_Claudio_Gay.jpg" target="_blank" rel="noopener">https://commons.wikimedia.org/wiki/File:Fotografia_de_Claudio_Gay.jpg</a></li>
+          </ul>
+        </section>
+        <p class="small-note">Continue exploring: <a href="references.html">view the project references page</a> for additional sources used throughout the website.</p>
+      </article>
+
+      <aside class="article-aside">
+        <span class="aside-number">01</span><p>FIELD NOTES</p><h3>Maps, Location & Cartographers</h3><div class="aside-rule"></div>
+        <p>Look closely at the landscape. Notice the shape of the land, the movement of water, and the relationship between physical features and political boundaries.</p>
+        <a href="about.html">About this project ↗</a>
+      </aside>
+    </section>
+  </main>
+  <dialog class="map-lightbox" id="map-lightbox" aria-label="Enlarged map">
+    <button class="map-lightbox-close" type="button" aria-label="Close enlarged map">&times;</button>
+    <img id="map-lightbox-image" src="" alt="">
+  </dialog>
+
+  <footer class="footer">
+    <a class="brand" href="index.html"><span class="brand-mark">P</span><span>PATAGONIA<small>CHILE · EARTH SCIENCE</small></span></a>
+    <p>A student exploration of the physical geography of southern Chile.</p><span>© 2026 · Educational project</span>
+  </footer>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (() => {
+      const dialog = document.getElementById('map-lightbox');
+      const enlargedImage = document.getElementById('map-lightbox-image');
+      const closeButton = dialog.querySelector('.map-lightbox-close');
+
+      document.querySelectorAll('[data-full-map]').forEach((mapButton) => {
+        mapButton.addEventListener('click', () => {
+          enlargedImage.src = mapButton.dataset.fullMap;
+          enlargedImage.alt = mapButton.dataset.mapAlt || 'Enlarged map';
+          dialog.showModal();
+        });
+      });
+
+      closeButton.addEventListener('click', () => dialog.close());
+
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+    })();
+  </script>
+</body>
 </html>
