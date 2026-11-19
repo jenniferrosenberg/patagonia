@@ -9,6 +9,32 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+
+    .research-section{margin:3rem 0}
+    .research-section h2{margin-bottom:1rem}
+    .research-section h3{margin-top:1.4rem}
+    .fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0}
+    .fact{padding:1.2rem;border-left:3px solid #9b8663;background:#f5f3ed}
+    .fact strong{display:block;margin-bottom:.35rem}
+    .visual-card{margin:1.5rem 0;padding:1.25rem;border:1px solid rgba(80,90,75,.2);border-radius:12px;background:#fff;overflow:hidden}
+    .visual-card img{display:block;width:100%;max-height:390px;object-fit:cover;border-radius:8px}
+    .visual-card figcaption,.small-source{font-size:.84rem;line-height:1.55;color:#666;margin-top:.65rem}
+    .tectonic-diagram{width:100%;height:auto;display:block;background:#eef2ef;border-radius:8px}
+    .chart{display:grid;gap:.85rem;margin:1.25rem 0}
+    .chart-row{display:grid;grid-template-columns: minmax(115px,1fr) 3fr auto;gap:.7rem;align-items:center;font-size:.9rem}
+    .bar-track{height:16px;background:#eeeae1;border-radius:20px;overflow:hidden}
+    .bar{height:100%;background:#9b8663;border-radius:20px}
+    .timeline{border-left:2px solid #9b8663;margin:1.4rem 0 1.4rem .55rem;padding-left:1.2rem}
+    .timeline-item{position:relative;margin:0 0 1.2rem}
+    .timeline-item:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#9b8663;left:-1.62rem;top:.35rem}
+    .timeline-item strong{display:block}
+    .references-list li{margin:.8rem 0;overflow-wrap:anywhere}
+    .resource-links a{display:inline-block;margin:.25rem .4rem .25rem 0}
+    .map-note{font-size:.9rem;color:#666}
+    @media(max-width:700px){.fact-grid{grid-template-columns:1fr}.chart-row{grid-template-columns:1fr;gap:.3rem}.visual-card{padding:.85rem}}
+
+    </style>
 </head>
 
 <body>
@@ -34,36 +60,172 @@
         <section class="section-wrap article-layout">
             <article class="article-main">
                 <p class="eyebrow">02 / Plate Tectonics, Earthquakes & Volcanoes</p>
-                <h2>A restless edge of the continent</h2>
-                <p class="lead">The Andes are connected to the movement of tectonic plates along the western edge of
-                    South America. Along much of Chile, the oceanic Nazca Plate moves beneath the South American Plate.
-                    This process is called subduction.</p>
-                <h3>Understanding the process</h3>
-                <p>Subduction helps explain why the Andes are high and why the region experiences earthquakes and
-                    volcanic activity. As plates converge, stress can build along locked sections of a fault. When rocks
-                    suddenly slip, seismic waves travel through the Earth and we feel an earthquake.</p>
-                <h3>Why it matters in Patagonia</h3>
-                <p>Southern Chile is geologically complex. Near the far south, the interactions among the South
-                    American, Antarctic, and Scotia plates also influence the region. The USGS describes these plate
-                    boundaries and their relationship to earthquakes and deformation.</p>
-                <p>The mountains we see are part of a much larger system that is still moving. Plate tectonics works
-                    over long periods, but earthquakes remind us that the Earth is active today. Understanding these
-                    processes also helps communities prepare for natural hazards.</p>
-                <div class="callout"><span class="callout-label">What is subduction?</span>
-                    <h3>Convergence · Oceanic plate · Continental plate · Mantle</h3>
-                    <p>At a convergent boundary, one tectonic plate can descend beneath another. In the Peru–Chile
-                        trench region, the Nazca Plate is subducted beneath South America. This process contributes to
-                        mountain building, earthquakes, and volcanism.</p>
-                </div>
-                <p class="small-note">Continue exploring: <a href="references.html">view the project references</a> for
-                    sources and further reading.</p>
+                <h2>Chile: a landscape shaped by moving plates</h2>
+                <p class="lead">Chile lies along one of the most active tectonic margins on Earth. The movement of oceanic and continental plates has helped build the Andes, created a chain of volcanoes, and produced some of the strongest earthquakes ever recorded. These same geological processes also helped form valuable mineral deposits that are important to Chile's economy.</p>
+
+                <section class="research-section" id="tectonic-plates">
+                    <h2>1. Tectonic plates and natural disasters</h2>
+                    <p>Most of Chile's mainland is next to a convergent plate boundary. Offshore, the oceanic Nazca Plate moves eastward and sinks beneath the continental South American Plate along the Peru–Chile Trench. This process is called <strong>subduction</strong>. The plates converge at roughly 65–80 millimeters per year along different parts of the margin. Friction can lock sections of the boundary, allowing stress to build until it is released as an earthquake (Hayes et al., 2015).</p>
+                    <p>Subduction also helps explain the Andes and the volcanic chain that runs through parts of Chile. Water released from the descending plate contributes to melting in the mantle above it; magma can then rise and feed volcanoes. Not every part of the boundary has the same volcanic activity: where the Nazca Plate descends at a very shallow angle beneath central Chile, active volcanoes are less common (Hayes et al., 2015).</p>
+
+                    <figure class="visual-card">
+                      <svg class="tectonic-diagram" viewBox="0 0 900 430" role="img" aria-labelledby="subduction-title subduction-desc">
+                        <title id="subduction-title">Simplified cross-section of the Nazca–South American plate boundary</title>
+                        <desc id="subduction-desc">The oceanic Nazca Plate moves east and descends beneath the South American Plate. A trench, earthquake zone, rising magma, and Andes volcano are shown.</desc>
+                        <rect x="0" y="0" width="900" height="430" fill="#eef2ef"/>
+                        <path d="M0 160 L280 160 L320 180 L350 215 L900 215 L900 430 L0 430 Z" fill="#d7c5a5"/>
+                        <path d="M0 160 L260 160 L300 175 L320 195 L350 215 L0 215 Z" fill="#78a9b5"/>
+                        <path d="M0 215 L305 215 Q360 225 420 270 L600 390 L555 430 L320 300 L240 270 L0 270 Z" fill="#668b9a"/>
+                        <path d="M350 215 L900 215 L900 430 L555 430 L600 390 L420 270 Z" fill="#d7c5a5"/>
+                        <path d="M560 215 L625 135 L690 215 Z" fill="#8d806c"/>
+                        <path d="M610 158 L625 135 L640 158" fill="none" stroke="#6f5540" stroke-width="5"/>
+                        <path d="M612 204 Q630 180 638 160 Q648 180 660 204" fill="#b86d4c"/>
+                        <path d="M635 157 L635 115" stroke="#b86d4c" stroke-width="5" stroke-dasharray="7 7"/>
+                        <path d="M95 135 L255 135" stroke="#245b70" stroke-width="7" stroke-linecap="round"/>
+                        <path d="M245 123 L265 135 L245 147" fill="none" stroke="#245b70" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M390 300 L520 390" stroke="#245b70" stroke-width="7" stroke-linecap="round"/>
+                        <path d="M507 386 L530 397 L519 371" fill="none" stroke="#245b70" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M320 190 L330 205 L340 190" fill="none" stroke="#355d67" stroke-width="4"/>
+                        <g fill="#263b3e" font-family="Arial, sans-serif" font-size="21" font-weight="bold">
+                          <text x="65" y="92">Pacific Ocean</text><text x="90" y="120" font-size="17">Nazca Plate →</text>
+                          <text x="690" y="80">South American Plate</text><text x="690" y="108" font-size="17">Continental crust</text>
+                          <text x="355" y="175" font-size="17">Peru–Chile Trench</text>
+                          <text x="645" y="125" font-size="17">Andes</text>
+                          <text x="665" y="270" font-size="17">Earthquake zone</text>
+                          <text x="675" y="300" font-size="17">Magma rises</text>
+                          <text x="70" y="350" font-size="17" fill="#fff">Subducting oceanic plate</text>
+                        </g>
+                        <path d="M430 285 L660 270" stroke="#4f5651" stroke-width="2" stroke-dasharray="5 5"/>
+                        <path d="M645 295 L635 210" stroke="#b86d4c" stroke-width="2" stroke-dasharray="5 5"/>
+                      </svg>
+                      <figcaption>Figure 1. Simplified illustration of subduction beneath Chile. The diagram is conceptual and is not drawn to scale. Based on the USGS explanation of the Nazca–South American plate boundary.</figcaption>
+                    </figure>
+
+                    <p>Chile also sits near a complex plate junction in the far south. Around the Chile Triple Junction, the Antarctic, South American, and Nazca plates meet; farther south and east, the Scotia Plate interacts with the South American Plate. These boundaries help explain why southern Patagonia and Tierra del Fuego have a different tectonic setting from central and northern Chile (Hayes et al., 2015).</p>
+                    <div class="fact-grid">
+                      <div class="fact"><strong>Convergent boundary</strong>Nazca Plate moves beneath South American Plate along most of the mainland margin.</div>
+                      <div class="fact"><strong>Southern plate junction</strong>Antarctic, South American, and Nazca plates meet near the Chile Triple Junction; the Scotia Plate is important farther south.</div>
+                      <div class="fact"><strong>Main hazards</strong>Earthquakes, tsunamis, volcanic eruptions, landslides, and lahars.</div>
+                      <div class="fact"><strong>Why it matters</strong>Plate motion builds mountains, generates magma, and releases accumulated seismic energy.</div>
+                    </div>
+                </section>
+
+                <section class="research-section" id="rocks-minerals">
+                    <h2>2. Rocks, minerals, and Chile's economy</h2>
+                    <p>Chile has important igneous, sedimentary, and metamorphic rocks, but its best-known mineral wealth is connected to the Andes and the long history of magmatism and hydrothermal activity. Copper deposits, including large porphyry copper systems, are especially important. Chile also produces lithium from brines in salt flats, as well as molybdenum, iodine, gold, silver, and iron ore.</p>
+                    <p>Mining is a major part of the national economy. In 2024, the mineral sector represented about 7.2% of Chile's gross domestic product and approximately 61% of the value of the country's exports. Chile was the world's leading producer of mined copper, accounting for 24% of global production, and the second-largest lithium producer in the USGS estimate (U.S. Geological Survey [USGS], 2025).</p>
+
+                    <figure class="visual-card">
+                      <h3>Chile's mineral exports in 2024</h3>
+                      <p class="small-source">Share of total Chilean exports by value, according to the USGS 2024 minerals summary.</p>
+                      <div class="chart" role="img" aria-label="Mineral exports represented about 61 percent of Chile's total exports by value in 2024; copper accounted for about 50 percent of all Chilean exports.">
+                        <div class="chart-row"><span>All mineral exports</span><div class="bar-track"><div class="bar" style="width:61%"></div></div><strong>61%</strong></div>
+                        <div class="chart-row"><span>Copper exports</span><div class="bar-track"><div class="bar" style="width:50%"></div></div><strong>50%</strong></div>
+                      </div>
+                      <figcaption>Figure 2. Minerals and copper as shares of Chile's total exports by value in 2024. Copper is included within the mineral-export total, so the two bars should not be added together. Source: USGS (2025).</figcaption>
+                    </figure>
+
+                    <p>Mining creates direct jobs in exploration, engineering, geology, mine operations, transportation, maintenance, and processing. It also supports indirect employment in construction, equipment, ports, energy, and other services. These jobs are important in northern mining regions, although the industry is capital-intensive and employment can change with commodity prices and investment cycles.</p>
+                    <p>Chile's leading copper export destinations in 2024 were China (about 52% of copper exports), the United States (11%), Japan (10%), and South Korea (6%) (USGS, 2025). Copper is used in electrical wiring, power grids, construction, and electronics. Lithium is used mainly in rechargeable batteries, including those in electric vehicles and energy-storage systems.</p>
+                    <h3>Environmental and social impacts</h3>
+                    <p>Mining also creates challenges. Copper mining can produce large volumes of waste rock and tailings, use substantial energy, and place pressure on water resources in dry northern regions. Lithium is extracted from brines in salt flats such as the Salar de Atacama. The OECD (2024) explains that pumping and evaporating brines can affect groundwater connections and may place pressure on freshwater availability, wetlands, wildlife, and local communities. Mining therefore brings export income and employment, but it also requires careful water management, environmental monitoring, consultation, and rehabilitation.</p>
+                </section>
+
+                <section class="research-section" id="earthquakes">
+                    <h2>3. Earthquakes and preparedness</h2>
+                    <p>Chile experiences frequent earthquakes because the Nazca and South American plates are continuously converging. Large earthquakes can occur when a locked section of the plate boundary suddenly slips. If the seafloor moves vertically, the earthquake can also generate a tsunami.</p>
+                    <div class="timeline">
+                      <div class="timeline-item"><strong>May 22, 1960 — Valdivia, magnitude 9.5</strong>The largest earthquake recorded instrumentally. It caused destructive shaking and a Pacific-wide tsunami that reached places including Hawaii and Japan (Biblioteca Nacional de Chile, n.d.).</div>
+                      <div class="timeline-item"><strong>February 27, 2010 — Maule, magnitude 8.8</strong>The offshore megathrust earthquake ruptured a long section of the plate boundary and generated a tsunami that affected coastal communities (USGS, 2010).</div>
+                      <div class="timeline-item"><strong>September 16, 2015 — Illapel, magnitude 8.3</strong>A major offshore earthquake in northern-central Chile generated a tsunami and prompted coastal evacuations (USGS, 2015).</div>
+                    </div>
+                    <h3>What does the government do to prepare people?</h3>
+                    <p>Chile's National Service for Disaster Prevention and Response (SENAPRED) provides public guidance, preparedness education, and emergency information. Its recommendations include identifying safe places in homes, schools, and workplaces; securing heavy furniture; knowing evacuation routes; and preparing an emergency kit. For coastal communities, tsunami evacuation routes and designated safe areas are important. The Hydrographic and Oceanographic Service of the Chilean Navy (SHOA) monitors tsunami threats and issues technical tsunami information for authorities.</p>
+                    <p>Chile also uses seismic design standards for buildings. These standards do not prevent earthquakes, but they are intended to reduce structural damage and protect lives. Preparation still matters: people should follow official alerts and evacuate when authorities instruct them to do so (SENAPRED, n.d.).</p>
+                    <div class="callout"><span class="callout-label">Earthquake safety</span>
+                      <h3>Know your safe place and your evacuation route</h3>
+                      <p>During strong shaking, protect yourself from falling objects. If you are on the coast and the earthquake is so strong or long that it is difficult to stand, move to higher ground immediately rather than waiting for a tsunami message. Always follow official local instructions.</p>
+                    </div>
+                </section>
+
+                <section class="research-section" id="mountains">
+                    <h2>4. Mountain ranges and their influence</h2>
+                    <p>Chile's mountains are not just scenery. They influence climate, water, transportation, settlement, and culture. The country's main north–south landforms include the Andes in the east and the Cordillera de la Costa near the Pacific, with the Central Valley or Intermediate Depression between them. In northern Chile, the Domeyko Range is an important mountain system west of the high Andes and is closely associated with the region's mineral landscapes (Ministerio del Medio Ambiente, 2016).</p>
+                    <h3>The Andes Mountains</h3>
+                    <p>The Andes are a long, high mountain chain formed largely through the convergence and subduction of oceanic plates beneath South America. In northern Chile, many peaks rise above 6,000 meters. The range includes volcanic peaks, high plateaus, deep valleys, and glaciated areas farther south. It forms a major international boundary with Argentina and Bolivia and contains important headwaters for rivers and streams.</p>
+                    <h3>The Cordillera de la Costa</h3>
+                    <p>This mountain system runs roughly parallel to the Pacific coast. Its height and shape vary along the country: in northern Chile, sections rise steeply above the coastal plain, while in central and southern Chile the range changes in elevation and continuity. It influences local coastal climates and separates some coastal areas from the Central Valley.</p>
+                    <h3>The Domeyko Range and the Patagonian Andes</h3>
+                    <p>The Domeyko Range is an important north–south mountain system in the Atacama region, west of the high Andes. It is part of the geological setting of northern Chile's mineral districts. Farther south, the Andes become more deeply dissected by glaciers and fjords. In Patagonia, the Southern Andes include ice fields, sharp peaks, and mountain valleys that strongly shape the landscape around Torres del Paine.</p>
+                    <h3>Climate, water, culture, and trade</h3>
+                    <p>The Andes create a rain-shadow effect that contributes to the extreme dryness of the Atacama region. In central Chile, snow stored in the Andes melts seasonally and helps supply rivers used for drinking water, irrigation, and hydropower. Farther south, abundant precipitation, glaciers, lakes, and rivers shape forests and communities. Mountains also influence local livelihoods and culture, including pastoralism, tourism, mountaineering, and Indigenous relationships with highland landscapes (NASA, 2023).</p>
+                    <p>Historically, steep mountains could make travel and trade difficult, but they were not an absolute barrier. Passes through the Andes connected communities and supported exchange between the Pacific and the interior of South America. Today, mountain passes, highways, tunnels, and border crossings connect Chile with Argentina and Bolivia. The Andes therefore function both as a natural barrier and as a corridor where routes are possible.</p>
+                </section>
+
+                <section class="research-section" id="volcanoes">
+                    <h2>5. Volcanoes in Chile</h2>
+                    <p>Chile has many volcanoes because subduction generates magma beneath the Andes. The Smithsonian Institution's Global Volcanism Program lists 90 Holocene volcanoes associated with Chile. Many are <strong>composite volcanoes (stratovolcanoes)</strong>, built from alternating layers of lava and ash. Examples include Villarrica, Llaima, and Calbuco. Other volcanic systems have different forms, including volcanic complexes and caldera systems (Global Volcanism Program, n.d.).</p>
+                    <div class="fact-grid">
+                      <div class="fact"><strong>Villarrica</strong>A prominent composite volcano in southern Chile. Its activity can produce ash, lava, and lahars from melting snow and ice.</div>
+                      <div class="fact"><strong>Llaima</strong>A large composite volcano in the Southern Andes. Its eruptions have produced lava and ash and can affect nearby communities and transport.</div>
+                      <div class="fact"><strong>Calbuco</strong>A composite volcano in the Los Lagos region. Its explosive 2015 eruption sent ash high into the atmosphere and disrupted nearby communities and air travel.</div>
+                      <div class="fact"><strong>Chaitén</strong>A volcano that produced a major explosive eruption in 2008, followed by dome growth. Ashfall and lahars affected the town and led to a large evacuation.</div>
+                      <div class="fact"><strong>Láscar</strong>An active composite volcano in northern Chile, known for explosive eruptions and ash emissions.</div>
+                      <div class="fact"><strong>Nevados de Chillán</strong>A volcanic complex with a prolonged period of activity beginning in 2016, including ash and lava-dome activity.</div>
+                    </div>
+                    <h3>How do volcanoes affect people and the environment?</h3>
+                    <p>Volcanic activity creates hazards, including ashfall, lava flows, pyroclastic density currents, lahars, and gases. Ash can affect breathing, water supplies, crops, roads, and aircraft. Lahars are especially dangerous when volcanic material mixes with rainwater or melted snow and ice and flows down valleys.</p>
+                    <p>Volcanoes can also bring benefits. Volcanic materials weather into mineral-rich soils that can support agriculture, and volcanic landscapes attract visitors for hiking, hot springs, skiing, and scenic tourism. Geothermal energy is another possible resource. The challenge is to enjoy and use these landscapes while respecting hazard zones and evacuation guidance.</p>
+                    <h3>Examples of historical eruptions</h3>
+                    <ul>
+                      <li><strong>Chaitén, 2008:</strong> A major explosive eruption began on May 2, 2008. Ashfall affected southern Chile and neighboring Argentina, and thousands of residents were evacuated.</li>
+                      <li><strong>Puyehue–Cordón Caulle, 2011:</strong> The eruption began in June 2011 and continued into 2012. Ash spread over a wide area, disrupted air travel, and affected communities and livestock.</li>
+                      <li><strong>Calbuco, 2015:</strong> Explosive activity began on April 22, 2015. Ashfall affected towns in the Los Lagos region and led to evacuations and travel disruption.</li>
+                      <li><strong>Villarrica, 2015:</strong> An explosive eruption in March 2015 prompted evacuations near the volcano and highlighted the risk to nearby communities and tourism areas.</li>
+                    </ul>
+                    <p>SERNAGEOMIN's National Volcanic Surveillance Network monitors volcanoes and communicates activity information. The Smithsonian Global Volcanism Program provides a scientific record of volcanoes and their eruptions. These sources help authorities and communities understand changing volcanic conditions.</p>
+                    <div class="resource-links">
+                      <a href="https://rnvv-backend.sernageomin.cl/educacion" target="_blank" rel="noopener">SERNAGEOMIN: Volcano education ↗</a>
+                      <a href="https://volcano.si.edu/volcanolist_countries.cfm?country=Chile" target="_blank" rel="noopener">Smithsonian: Chile volcano list ↗</a>
+                    </div>
+                </section>
+
+                <section class="research-section" id="resources">
+                    <h2>6. Explore the science</h2>
+                    <p>These scientific resources provide maps, monitoring information, and examples that help explain the processes discussed on this page.</p>
+                    <div class="resource-links">
+                      <a href="https://pubs.usgs.gov/of/2015/1031/e/" target="_blank" rel="noopener">USGS plate tectonics and seismicity map ↗</a>
+                      <a href="https://www.senapred.cl/sismos/" target="_blank" rel="noopener">SENAPRED earthquake preparedness ↗</a>
+                      <a href="https://www.sernageomin.cl/" target="_blank" rel="noopener">SERNAGEOMIN geological information ↗</a>
+                      <a href="https://www.usgs.gov/centers/national-minerals-information-center/chile" target="_blank" rel="noopener">USGS mineral industry data for Chile ↗</a>
+                    </div>
+                </section>
+
+                <section class="research-section" id="references">
+                    <h2>References</h2>
+                    <p class="map-note">Sources are listed in APA style. They include scientific agencies, Chilean government organizations, and peer-reviewed or intergovernmental research. Image and diagram captions identify the relevant visual sources.</p>
+                    <ul class="references-list">
+                      <li>Biblioteca Nacional de Chile. (n.d.). <em>Los terremotos en Chile (1570–2010)</em>. Memoria Chilena. <a href="https://www.memoriachilena.gob.cl/602/w3-article-3576.html" target="_blank" rel="noopener">https://www.memoriachilena.gob.cl/602/w3-article-3576.html</a></li>
+                      <li>Global Volcanism Program. (n.d.). <em>Volcanoes of Chile</em>. Smithsonian Institution. Retrieved November 18, 2026, from <a href="https://volcano.si.edu/volcanolist_countries.cfm?country=Chile" target="_blank" rel="noopener">https://volcano.si.edu/volcanolist_countries.cfm?country=Chile</a></li>
+                      <li>Hayes, G. P., Smoczyk, G. M., Benz, H. M., Furlong, K. P., &amp; Villaseñor, A. (2015). <em>Seismicity of the Earth 1900–2013: Seismotectonics of South America (Nazca Plate Region)</em> (Open-File Report 2015–1031–E). U.S. Geological Survey. <a href="https://doi.org/10.3133/ofr20151031E" target="_blank" rel="noopener">https://doi.org/10.3133/ofr20151031E</a></li>
+                      <li>Ministerio del Medio Ambiente. (2016). <em>Tercera comunicación nacional de Chile ante la Convención Marco de las Naciones Unidas sobre el Cambio Climático</em>. Gobierno de Chile. <a href="https://mma.gob.cl/wp-content/uploads/2017/12/TCN-2016b1.pdf" target="_blank" rel="noopener">https://mma.gob.cl/wp-content/uploads/2017/12/TCN-2016b1.pdf</a></li>
+                      <li>NASA. (2023, August 6). <em>Looking down on the Andes</em>. NASA Earth Observatory. <a href="https://eol.jsc.nasa.gov/Collections/EarthObservatory/articles/LookingDownontheAndes.htm" target="_blank" rel="noopener">https://eol.jsc.nasa.gov/Collections/EarthObservatory/articles/LookingDownontheAndes.htm</a></li>
+                      <li>Organisation for Economic Co-operation and Development. (2024). <em>OECD environmental performance reviews: Chile 2024</em>. OECD Publishing. <a href="https://www.oecd.org/en/publications/oecd-environmental-performance-reviews-chile-2024_5bc65d36-en.html" target="_blank" rel="noopener">https://www.oecd.org/en/publications/oecd-environmental-performance-reviews-chile-2024_5bc65d36-en.html</a></li>
+                      <li>Servicio Nacional de Prevención y Respuesta ante Desastres. (n.d.). <em>Sismos</em>. Gobierno de Chile. Retrieved November 18, 2026, from <a href="https://www.senapred.cl/sismos/" target="_blank" rel="noopener">https://www.senapred.cl/sismos/</a></li>
+                      <li>Servicio Nacional de Geología y Minería. (n.d.). <em>Red Nacional de Vigilancia Volcánica: Educación</em>. Gobierno de Chile. <a href="https://rnvv-backend.sernageomin.cl/educacion" target="_blank" rel="noopener">https://rnvv-backend.sernageomin.cl/educacion</a></li>
+                      <li>U.S. Geological Survey. (2010). <em>M 8.8—2010 Maule, Chile earthquake</em>. <a href="https://earthquake.usgs.gov/earthquakes/eventpage/official20100227063411530_30/executive" target="_blank" rel="noopener">https://earthquake.usgs.gov/earthquakes/eventpage/official20100227063411530_30/executive</a></li>
+                      <li>U.S. Geological Survey. (2015). <em>M 8.3—48 km W of Illapel, Chile</em>. <a href="https://earthquake.usgs.gov/earthquakes/eventpage/us20003k7a/pager" target="_blank" rel="noopener">https://earthquake.usgs.gov/earthquakes/eventpage/us20003k7a/pager</a></li>
+                      <li>U.S. Geological Survey. (2015). <em>Seismicity of the Earth 1900–2013: Seismotectonics of South America (Nazca Plate Region)</em> (Open-File Report 2015–1031–E). <a href="https://pubs.usgs.gov/publication/ofr20151031E" target="_blank" rel="noopener">https://pubs.usgs.gov/publication/ofr20151031E</a></li>
+                      <li>U.S. Geological Survey. (2025). <em>Chile: 2024 minerals yearbook and country data</em>. National Minerals Information Center. <a href="https://www.usgs.gov/centers/national-minerals-information-center/chile" target="_blank" rel="noopener">https://www.usgs.gov/centers/national-minerals-information-center/chile</a></li>
+                    </ul>
+                </section>
+                <p class="small-note">Continue exploring: <a href="maps.html">Maps &amp; Location</a> · <a href="references.html">Project references</a>.</p>
             </article>
             <aside class="article-aside"><span class="aside-number">02</span>
                 <p>FIELD NOTES</p>
-                <h3>Plate Tectonics, Earthquakes & Volcanoes</h3>
+                <h3>Plates, Resources & Natural Hazards</h3>
                 <div class="aside-rule"></div>
-                <p>Look closely at the landscape. Notice the shape of the land, the movement of water, and the
-                    relationship between living things and their environment.</p><a href="about.html">About this project
+                <p>Explore how moving plates shape mountains, trigger earthquakes, feed volcanoes, and help create the mineral resources that influence life and work in Chile.</p><a href="about.html">About this project
                     ↗</a>
             </aside>
         </section>
